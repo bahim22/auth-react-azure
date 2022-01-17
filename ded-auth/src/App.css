@@ -7,11 +7,11 @@
   pointer-events: animation;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animate-bounce: w-6 h-6 
+  
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;

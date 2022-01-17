@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 import React, { useState } from "react";
 //import AzureAuthenticationContext from "./azure-authentication-context";
 import { AccountInfo } from "@azure/msal-browser";
 //import { json } from 'stream/consumers';
+//import MyTabs from './components/tab';
+//import MyDropdown from './components/dropdown';
 import AzureAuthenticationButton from './azure/azure-authentication-component';
 
 function App() {
@@ -48,21 +50,23 @@ function App() {
 		);
 	};
 
+
+
 	return (
-		<div id="App"  className="App">
-      <header className="App-header">
-        <img src='./logo.svg' className="App-logo" alt="logo" />
-        <p>
-          Welcome to  <code>HimaLand:</code> Dionysus Era
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/bahim22"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub Profile
-        </a>
+	<div id="App"  className="App">
+		<header className="App-header">
+			<img src='./logo.svg' className="App-logo" alt="logo" />
+			<p>
+				Welcome to  <code>HimaLand:</code> Dionysus Era
+			</p>
+			<a
+				className="App-link"
+				href="https://github.com/bahim22"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+			GitHub Profile
+			</a>
 			<h2>Login to Continue</h2>
 			<AzureAuthenticationButton onAuthenticated={onAuthenticated} />
 			{currentUser && (
@@ -71,29 +75,9 @@ function App() {
 					<ShowPermissionRevokeLinks />
 				</div>
 			)}
-			</header>
-		</div>
+		</header>
+	</div>
 	)
-}
-/*function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}*/
+};
 
 export default App;
