@@ -51,7 +51,7 @@ function App() {
 	return (
 		<div id="App"  className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src='./logo.svg' className="App-logo" alt="logo" />
         <p>
           Welcome to  <code>HimaLand:</code> Dionysus Era
         </p>
@@ -63,7 +63,6 @@ function App() {
         >
           GitHub Profile
         </a>
-      </header>
 			<h2>Login to Continue</h2>
 			<AzureAuthenticationButton onAuthenticated={onAuthenticated} />
 			{currentUser && (
@@ -72,6 +71,7 @@ function App() {
 					<ShowPermissionRevokeLinks />
 				</div>
 			)}
+			</header>
 		</div>
 	)
 }
