@@ -1,12 +1,9 @@
-//import logo from './logo.svg';
 import './App.css';
 
 import React, { useState } from "react";
 //import AzureAuthenticationContext from "./azure-authentication-context";
 import { AccountInfo } from "@azure/msal-browser";
 //import { json } from 'stream/consumers';
-//import MyTabs from './components/tab';
-//import MyDropdown from './components/dropdown';
 import AzureAuthenticationButton from './azure/azure-authentication-component';
 
 function App() {

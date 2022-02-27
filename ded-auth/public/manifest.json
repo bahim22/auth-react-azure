@@ -1,8 +1,8 @@
 {
-    "name": "Dionysus Era Dev Next PWA",
+    "name": "Dionysus Era Dev Azure Login Site",
     "lang": "en-us",
-    "short_name": "DedNextPwa",
-    "description": "A PWA blog and portfolio for web developer Ibrahima Balde, Dionysus Era",
+    "short_name": "DedAzAuth",
+    "description": "A TypeScript React App for logging in Users by Ibrahima Balde, Dionysus Era",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
