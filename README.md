@@ -1,2 +1,4 @@
+
 # staticwebapp-with-api
-azurre swa with api
+
+azure swa with api
