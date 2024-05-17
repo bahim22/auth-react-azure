@@ -1,7 +1,16 @@
 .App {
   text-align: center;
 }
-
+.wrapper {
+	margin: 80px auto;
+	text-align: center;
+	width: 100%;
+	position: relative;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: animation;
@@ -17,7 +26,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -35,4 +44,111 @@
   to {
     transform: rotate(360deg);
   }
+}
+container {
+	position: absolute;
+	top: 10%;
+}
+.button {
+	border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #153f00;
+  padding: 15px 50px;
+  margin: 0 auto;
+}
+.button span {
+	position: relative;
+  z-index: 1;
+}
+.button:after {
+	content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 470%;
+  width: 140%;
+  background: #52b71f;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+  transform: translateX(-100%) translateY(-25%) rotate(45deg);
+}
+.button:hover:after {
+	-webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+/* pretty-print-json ~ MIT License */
+
+/* Layout */
+.json-container           { font-family: menlo, consolas, monospace; font-style: normal; font-weight: bold; line-height: 1.4em; font-size: 0.9rem; transition: background-color 400ms; }
+a.json-link               { text-decoration: none; border-bottom: 1px solid; outline: none; }
+a.json-link:hover         { background-color: transparent; outline: none; }
+ol.json-lines             { white-space: normal; padding-inline-start: 3em; margin: 0px; }
+ol.json-lines >li         { white-space: pre; text-indent: 0.7em; line-height: 1.5em; padding: 0px; }
+ol.json-lines >li::marker { font-family: system-ui, sans-serif; font-weight: normal; }
+.json-key, .json-string, .json-number, .json-boolean, .json-null, .json-mark, a.json-link, ol.json-lines >li { transition: all 400ms; }
+
+/* Colors */
+.json-container                   { background-color: white; }
+.json-key                         { color: brown; }
+.json-string                      { color: olive; }
+.json-number                      { color: navy; }
+.json-boolean                     { color: teal; }
+.json-null                        { color: dimgray; }
+.json-mark                        { color: black; }
+a.json-link                       { color: purple; }
+a.json-link:visited               { color: slategray; }
+a.json-link:hover                 { color: blueviolet; }
+a.json-link:active                { color: slategray; }
+ol.json-lines >li::marker         { color: dimgray; }
+ol.json-lines >li:nth-child(odd)  { background-color: gainsboro; }
+ol.json-lines >li:nth-child(even) { background-color: whitesmoke; }
+ol.json-lines >li:hover           { background-color: lemonchiffon; }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+   .json-container                   { background-color: black; }
+   .json-key                         { color: indianred; }
+   .json-string                      { color: khaki; }
+   .json-number                      { color: deepskyblue; }
+   .json-boolean                     { color: mediumseagreen; }
+   .json-null                        { color: darkorange; }
+   .json-mark                        { color: silver; }
+   a.json-link                       { color: mediumorchid; }
+   a.json-link:visited               { color: slategray; }
+   a.json-link:hover                 { color: violet; }
+   a.json-link:active                { color: slategray; }
+   ol.json-lines >li::marker         { color: silver; }
+   ol.json-lines >li:nth-child(odd)  { background-color: #222222; }
+   ol.json-lines >li:nth-child(even) { background-color: #161616; }
+   ol.json-lines >li:hover           { background-color: dimgray; }
+   }
+pre {
+  outline: 1px solid #ccc;
+  padding: 5px;
+  margin: 15px;
+}
+.string {
+  color: green;
+}
+.number {
+  color: darkorange;
+}
+.boolean {
+  color: blue;
+}
+.null {
+  color: magenta;
+}
+.key {
+  color: red;
 }
