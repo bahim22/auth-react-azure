@@ -58,7 +58,7 @@ export class AzureAuthenticationContext {
 			account,
 		};
 
-		this.MYMSALObj.logout(logOutRequest);
+		this.MYMSALObj.logoutPopup(logOutRequest);
 		//this.MYMSALObj.logoutRedirect(logOutRequest);
 	} //Deprecated logout func. Use logoutRedirect or logoutPopup instead
 	handleResponse(response: AuthenticationResult, incomingFunction: any) {
