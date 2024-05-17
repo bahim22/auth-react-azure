@@ -82,10 +82,10 @@ export class AzureAuthenticationContext {
 		}
 
 		if (currentAccounts.length > 1) {
-			//TBD: add choose acct code here
+			//add choose acct code here
 			// @ts-ignore
 			console.log(
-				"multiple accounts detected, need to add choose account code."
+				"multiple accounts detected, need to + choose account code."
 			);
 			return currentAccounts[0];
 		}	else if (currentAccounts.length === 1) {
