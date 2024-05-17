@@ -19,7 +19,7 @@ function App() {
 	//render json data in readable format
 	const PrettyPrintJson = ({ data }: any) => {
 		return (
-			<div id="wrapper">
+			<div>
 				<pre id="account" className="json-container">{JSON.stringify(data, null, 2)}</pre>
 			</div>
 		);
@@ -27,7 +27,7 @@ function App() {
 	// Quick link - user revokes app's permission
 	const ShowPermissionRevokeLinks = () => {
 		return (
-			<div className="container">
+			<div>
 				<div id="wrapper">
 					<a
 						href="https://myapps.microsoft.com"
@@ -36,6 +36,7 @@ function App() {
 						<span>Revoke Microsoft Entra permission </span>
 					</a>
 				</div>
+				<br />
 				<div id="wrapper">
 					<a
 						href="https://account.live.com/consent/manage"
@@ -51,7 +52,7 @@ function App() {
 
 
 	return (
-	<div id="App"  className="App">
+	<div id="App" className="App">
 		<header className="App-header">
 			<img src='./logo.svg' className="App-logo" alt="logo" />
 			<p>
