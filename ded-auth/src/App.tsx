@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { AccountInfo } from "@azure/msal-browser";
 //import { json } from 'stream/consumers';
 import AzureAuthenticationButton from './azure/azure-authentication-component';
+import { prettyPrintJson } from 'pretty-print-json';
 
 function App() {
 	//current authenticated User
@@ -18,29 +19,29 @@ function App() {
 	//render json data in readable format
 	const PrettyPrintJson = ({ data }: any) => {
 		return (
-			<div>
-				<pre>{JSON.stringify(data, null, 2)}</pre>
+			<div id="wrapper">
+				<pre id="account" className="json-container">{JSON.stringify(data, null, 2)}</pre>
 			</div>
 		);
 	};
 	// Quick link - user revokes app's permission
 	const ShowPermissionRevokeLinks = () => {
 		return (
-			<div>
-				<div>
+			<div className="container">
+				<div id="wrapper">
 					<a
 						href="https://myapps.microsoft.com"
 						target="_blank"
 						rel="noreferrer">
-						Revoke AAD permission
+						<span>Revoke Microsoft Entra permission </span>
 					</a>
 				</div>
-				<div>
+				<div id="wrapper">
 					<a
 						href="https://account.live.com/consent/manage"
 						target="_blank"
 						rel="noreferrer">
-						Revoke Consumer permission
+						<span>Revoke Microsoft Live permission </span>
 					</a>
 				</div>
 			</div>
