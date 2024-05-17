@@ -17,14 +17,14 @@ export class AzureAuthenticationContext {
 	private loginRedirectRequest?: RedirectRequest;
 	private loginRequest?: PopupRequest;
 
-	public isAuthticationConfigured = false;
+	public isAuthenticationConfigured = false;
 
 	constructor() {
 		// @ts-ignore
 		this.account = null;
 		this.setRequestObjects();
 		if (MSAL_CONFIG?.auth?.clientId) {
-			this.isAuthticationConfigured = true;
+			this.isAuthenticationConfigured = true;
 		}
 	}
 	private setRequestObjects(): void {
@@ -59,12 +59,13 @@ export class AzureAuthenticationContext {
 		};
 
 		this.MYMSALObj.logout(logOutRequest);
-	} //Deprecated logout function. Use logoutRedirect or logoutPopup instead
+		//this.MYMSALObj.logoutRedirect(logOutRequest);
+	} //Deprecated logout func. Use logoutRedirect or logoutPopup instead
 	handleResponse(response: AuthenticationResult, incomingFunction: any) {
-		if (response !==null && response.account !==null) {
+		if (response !== null && response.account !== null) {
 			this.account = response.account;
 		} else {
-			this.account = this.getAccount ();
+			this.account = this.getAccount();
 		}
 
 		if (this.account) {
@@ -72,7 +73,7 @@ export class AzureAuthenticationContext {
 		}
 	}
 	private getAccount(): AccountInfo | undefined {
-		console.log('loadAuthModeule');
+		console.log('loadAuthModule');
 		const currentAccounts = this.MYMSALObj.getAllAccounts();
 		if (currentAccounts === null) {
 			//@ts-ignore

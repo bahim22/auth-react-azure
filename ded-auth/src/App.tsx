@@ -54,7 +54,7 @@ function App() {
 		<header className="App-header">
 			<img src='./logo.svg' className="App-logo" alt="logo" />
 			<p>
-				Welcome to  <code>HimaLand:</code> Dionysus Era
+				Dionysus Era Development <code>Microsoft Entra/Azure Authentication</code> Dionysus Era
 			</p>
 			<a
 				className="App-link"
@@ -62,9 +62,10 @@ function App() {
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-			GitHub Profile
+			Hima Balde GitHub Profile
 			</a>
 			<h2>Login to Continue</h2>
+			<h3>Use a Microsoft Live or 365 Username</h3>
 			<AzureAuthenticationButton onAuthenticated={onAuthenticated} />
 			{currentUser && (
 				<div>
