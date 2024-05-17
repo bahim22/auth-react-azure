@@ -2,9 +2,9 @@
   text-align: center;
 }
 .wrapper {
-	margin: 80px auto;
+	margin: auto;
 	text-align: center;
-	width: 100%;
+	width: auto;
 	position: relative;
   border: 2px solid #000;
   display: flex;
@@ -25,6 +25,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+	width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
