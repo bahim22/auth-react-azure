@@ -38,18 +38,18 @@ const AzureAuthenticationButton = ({ onAuthenticated }: any): JSX.Element => {
 
 	const showLogInButton = (): any => {
 		return (
-			<button id="authenticationButton" onClick={() => logIn("loginPopup")}>
-				Log in
+			<button className="button" type="button"id="authenticationButton" onClick={() => logIn("loginPopup")}>
+				<span> Log In </span>
 			</button>
 		);
 	};
 
 	const showLogOutButton = (): any => {
 		return (
-			<div id="authenticationButtonDiv">
+			<div className="container" id="authenticationButtonDiv">
 				<div id="authentication">
-					<button id="authenticationButton" onClick={() => logOut ()}>
-						Log Out
+					<button className="button" type="button" id="authenticationButton" onClick={() => logOut ()}>
+						<span> Log Out </span>
 					</button>
 				</div>
 			</div>
@@ -61,8 +61,8 @@ const AzureAuthenticationButton = ({ onAuthenticated }: any): JSX.Element => {
 	};
 
 	return (
-		<div id="authentication">
-			{authenticationModule.isAuthticationConfigured ? (
+		<div className="container" id="authentication">
+			{authenticationModule.isAuthenticationConfigured ? (
 				showButton()
 			) : (
 				<div>Authentication Client ID not Configured.</div>
